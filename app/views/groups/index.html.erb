@@ -1,3 +1,9 @@
 <% @groups.each do |group| %>
   <%= group.name %>
 <% end %>
+
+<h3>Import Groups</h3>
+<%= form_tag import_groups_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload Groups" %>
+<% end %>
