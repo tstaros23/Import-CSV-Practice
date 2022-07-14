@@ -1,0 +1,11 @@
+<%= @group.name %>
+
+<br>
+<% @group.users.each do |user| %>
+  <section id="user-<%= user.id %>">
+    <%= user.first_name %>
+    <%= user.last_name %>
+    <br>
+    <%= user.user_groups.first.role %>
+  </section>
+<% end %>

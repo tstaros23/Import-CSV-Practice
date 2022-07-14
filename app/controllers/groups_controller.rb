@@ -9,6 +9,6 @@ class GroupsController < ApplicationController
 
   def import
     Group.import(params[:file])
-    redirect_to groups_path, notice: "Groups Added Successfully"
+    redirect_to groups_path
   end
 end
