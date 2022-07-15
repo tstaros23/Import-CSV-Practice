@@ -14,7 +14,7 @@ require 'rails_helper'
          get '/groups'
 
          expect(response).to render_template("groups/index")
-         expect(response).to have_https_status(:success)
+         expect(response.status).to eq(200)
        end
      end
    end
