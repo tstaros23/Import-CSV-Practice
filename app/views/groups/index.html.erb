@@ -1,8 +1,10 @@
 <% @groups.each do |group| %>
   <%= group.name %>
-  <%# <% binding.pry %> %>
-  <% group.users.each do |user| %>
+  <br>
+  <% group.organizers.each do |organizer| %>
+    <%= "#{organizer.user.first_name} #{organizer.user.last_name}"  %>
   <% end %>
+  <br>
 <% end %>
 
 <h3>Import Groups</h3>

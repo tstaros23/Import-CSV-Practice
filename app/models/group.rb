@@ -11,4 +11,8 @@ class Group < ApplicationRecord
       user_group = UserGroup.find_or_create_by(user_id: user.id, group_id: group.id, role: attributes['Role in Group'])
     end
   end
+
+  def organizers
+    user_groups.where(role: 0)
+  end
 end
