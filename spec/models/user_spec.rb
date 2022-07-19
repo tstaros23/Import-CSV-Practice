@@ -17,7 +17,7 @@ RSpec.describe User, type: :model do
 
         group = Group.create!(name: 'SlC Developers')
         user = User.create!(first_name: 'Ted', last_name: 'Staros')
-        user_group = UserGroup.create!(user_id: user.id, group_id: group.id, role: 'Organizer')
+        user_group = UserGroup.create!(user_id: user.id, group_id: group.id, role: 0)
 
         expect(user.user_group_role).to eq('Organizer')
       end
