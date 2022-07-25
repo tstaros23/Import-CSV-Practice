@@ -8,7 +8,7 @@ class GroupsController < ApplicationController
   end
 
   def import
-    Group.import(params[:file])
+    data = Group.import(params[:file])
     redirect_to groups_path
   end
 end
